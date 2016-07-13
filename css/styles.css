@@ -1,0 +1,131 @@
+html, body, #app_container, #nav_spacing {
+  font: helvetica;
+  color: white;
+  margin: 0;
+  background: #222;
+  height: 100%;
+  width: 100%;
+}
+
+#nav_spacing {
+  padding-top: 100px;
+}
+
+#container {
+  width: 99%;
+  height: 99%;
+  text-align: center;
+  margin: 0;
+}
+
+#intro_namespace {
+  position: relative;
+  top: 10%;
+}
+
+#navigation {
+  background: #222;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+ul {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 5px;
+  text-align: left;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition-property: background, color;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: black;
+  background: white;
+}
+
+h1 {
+  width: 99%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#name {
+  font-size: 200%;
+}
+
+#project_page {
+  display: inline-block;
+  max-width: 600px;
+}
+
+#project {
+  border: 1px solid white;
+  padding: 5px;
+  display: inline-block;
+  transition-property: background, color;
+  transition-duration: 1s;
+  color: white;
+}
+
+#project #item_title {
+  font-weight: bold;
+}
+
+#project #item_descrip {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#project li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+#project:hover {
+  color: black;
+  background: white;
+}
+
+#about_me {
+  display: inline-block;
+  margin-right: 35%;
+}
+
+#about_title {
+  font-weight: bold;
+  font-size: 200%;
+  text-decoration: underline;
+  padding:5px;
+}
+
+#abouts {
+  text-align: left;
+  background: black;
+  border: 1px solid white;
+  padding: 5px;
+  font-size: 12pt;
+  max-width: 400px;
+  padding-bottom: 20px;
+}
+
+table {
+  align: right;
+}
+#skills_header {
+  text-align: center;
+  font-weight: bold;
+}
+#skills_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table_col {
+}
