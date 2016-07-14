@@ -30248,7 +30248,7 @@
 	    projects.map(function (item, i) {
 	      return _react2.default.createElement(
 	        "a",
-	        { href: item.url, id: "project", key: "project_" + i },
+	        { href: item.url, target: "_blank", id: "project", key: "project_" + i },
 	        _react2.default.createElement(
 	          "div",
 	          { id: "item_title" },
@@ -30540,16 +30540,7 @@
 	      _react2.default.createElement(
 	        "div",
 	        null,
-	        "Tel: (469)-767-3322"
-	      )
-	    ),
-	    _react2.default.createElement(
-	      "ul",
-	      null,
-	      _react2.default.createElement(
-	        "div",
-	        null,
-	        "Email: timothy.do@gmail.com"
+	        "Email: tdo@timothybdo.com"
 	      )
 	    )
 	  );
