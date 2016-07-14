@@ -29348,10 +29348,11 @@
 	exports.default = function () {
 	  return {
 	    routing: {},
-	    projects: [{ id: 'test1',
+	    projects: [{ url: 'https://github.com/mellowDice/ee_client',
 	      name: 'ShatterLand',
 	      description: 'A mobile Virtual Reality game where marbles collide for dominance. ' + 'The client was designed using the Unity3D engine with the goal of making it highly scalable across multiple platforms. ' + 'Servers established using Python in conjunction with Flask to serve as a hub for inter-client communication. ',
-	      additional: ['Utilizes native Unity3D functionality to provide a robust and optimized experience for users on mobile devices', 'Modularized server authoritative commands into Python microservices', 'Employed a Redis database to reduce memory load on server', 'Set up continuous integration testing and deployment with CircleCI and DockerHub to speed up development time', 'Packaged Shatter Lands server and data services with Docker Machine, deploying the services onto Digital Ocean']
+	      additional: ['Utilizes native Unity3D functionality to provide a robust and optimized experience for users on mobile devices', 'Modularized server authoritative commands into Python microservices', 'Employed a Redis database to reduce memory load on server', 'Set up continuous integration testing and deployment with CircleCI and DockerHub to speed up development time', 'Packaged ShatterLand\'s server and data services with Docker Machine, deploying the services onto Digital Ocean'],
+	      imageSrc: ['https://github.com/mellowDice/ee_diagrams/blob/master/ScreenShot1.png?raw=true', 'https://github.com/mellowDice/ee_diagrams/blob/master/Screen%20Shot%202016-07-08%20at%203.45.37%20PM.png?raw=true']
 	    }]
 	  };
 	};
@@ -30032,6 +30033,10 @@
 	
 	var _NavigationBar2 = _interopRequireDefault(_NavigationBar);
 	
+	var _Footer = __webpack_require__(/*! ./Footer.jsx */ 307);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function Container(props) {
@@ -30043,7 +30048,8 @@
 	      'div',
 	      { id: 'nav_spacing' },
 	      props.children
-	    )
+	    ),
+	    _react2.default.createElement(_Footer2.default, null)
 	  );
 	}
 	
@@ -30143,7 +30149,7 @@
 	      _react2.default.createElement(
 	        "div",
 	        { id: "name" },
-	        " Tim Do "
+	        " Timothy Do "
 	      ),
 	      _react2.default.createElement(
 	        "div",
@@ -30241,8 +30247,8 @@
 	    null,
 	    projects.map(function (item, i) {
 	      return _react2.default.createElement(
-	        "div",
-	        { id: "project", key: "project_" + i },
+	        "a",
+	        { href: item.url, id: "project", key: "project_" + i },
 	        _react2.default.createElement(
 	          "div",
 	          { id: "item_title" },
@@ -30260,11 +30266,14 @@
 	        item.additional.map(function (val, i) {
 	          return _react2.default.createElement(
 	            "li",
-	            null,
+	            { key: "additional_" + i },
 	            " ",
 	            val,
 	            " "
 	          );
+	        }),
+	        item.imageSrc.map(function (url, i) {
+	          return _react2.default.createElement("img", { className: "project_images", key: "imag_" + i, src: url });
 	        })
 	      );
 	    })
@@ -30483,6 +30492,76 @@
 	};
 	
 	exports.default = Main;
+
+/***/ },
+/* 307 */
+/*!**************************************!*\
+  !*** ./src/js/Components/Footer.jsx ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Footer = function Footer() {
+	  var locations = _react2.default.createElement(
+	    "div",
+	    null,
+	    _react2.default.createElement(
+	      "ul",
+	      null,
+	      _react2.default.createElement(
+	        "a",
+	        { href: "https://www.linkedin.com/in/timothybdo" },
+	        "LinkedIn"
+	      )
+	    ),
+	    _react2.default.createElement(
+	      "ul",
+	      null,
+	      _react2.default.createElement(
+	        "a",
+	        { href: "https://github.com/TDo13" },
+	        "Github"
+	      )
+	    ),
+	    _react2.default.createElement(
+	      "ul",
+	      null,
+	      _react2.default.createElement(
+	        "div",
+	        null,
+	        "Tel: (469)-767-3322"
+	      )
+	    ),
+	    _react2.default.createElement(
+	      "ul",
+	      null,
+	      _react2.default.createElement(
+	        "div",
+	        null,
+	        "Email: timothy.do@gmail.com"
+	      )
+	    )
+	  );
+	
+	  return _react2.default.createElement(
+	    "div",
+	    { id: "footer" },
+	    locations
+	  );
+	};
+	
+	exports.default = Footer;
 
 /***/ }
 /******/ ]);
